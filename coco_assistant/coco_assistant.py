@@ -38,7 +38,7 @@ Expected Directory Structure
 class COCO_Assistant:
     """COCO_Assistant object"""
 
-    def __init__(self, img_dir, ann_dir):
+    def __init__(self, img_dir, ann_dir, resultdir):
         """
 
         Args:
@@ -48,7 +48,7 @@ class COCO_Assistant:
         """
         self.img_dir = Path(img_dir)
         self.ann_dir = Path(ann_dir)
-        self.res_dir = self.ann_dir.parent / "results"
+        self.res_dir = Path(resultdir)
 
         self.dh = utils.DirectoryHandler(img_dir, ann_dir, self.res_dir)
 
