@@ -300,10 +300,13 @@ if __name__ == "__main__":
     p = Path("/media/ashwin/DATA1/COCO-Assistant/")
     img_dir = p / "images"
     ann_dir = p / "annotations"
+    resultpath = p
+    
+    
 
     # TODO: Create tiny dummy datasets and test these functions on them
 
-    cas = COCO_Assistant(img_dir, ann_dir)
+    cas = COCO_Assistant(img_dir, ann_dir,resultpath)
 
     # cas.merge(False)
     # cas.remove_cat()
